@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción">
+    <script src="https://kit.fontawesome.com/c501f28f64.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imagenes/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/julia.css">
+    <link rel="stylesheet" href="css/comun.css">
+    <script src="js/accesibilidad.js"></script>
+
+    <title>Sity-Pó Karaoke - Eventos</title>
+</head>
+<body>
+    <header id="top">
+        <h1 class="titulo">Eventos Sity-Pó</h1>
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house icono casa" aria-hidden="true"></i>
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="salas.html">
+                    <i class="fa-solid fa-door-open icono puerta" aria-hidden="true"></i>
+                    Habitaciones e Instalaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="Ubicaciones.html">
+                    <i class="fa-solid fa-location-dot icono ubicacion" aria-hidden="true"></i>
+                    Ubicaciones
+                </a>
+            </li>
+
+            <li>
+                <a href="reserva.html">
+                    <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                    Reservar
+                </a>
+            </li>
+
+            </ul>
+            </nav>
+    </header>
+    <main class="pagina" aria-label="Página de eventos y calendario">
+    <section class="calendar-section" aria-label="Calendario de eventos">
+        <div class="calendar" id="calendar" role="grid" aria-label="Calendario mensual de eventos">
+            <div class="calendar-header">
+                <button id="prev" aria-label="Mes anterior">‹</button>
+                <span id="monthYear" aria-live="polite" aria-atomic="true"></span>
+                <button id="next" aria-label="Mes siguiente">›</button>
+            </div>
+            <div class="calendar-grid" role="row" aria-label="Días de la semana">
+                <div class="day-name">Lun</div>
+                <div class="day-name">Mar</div>
+                <div class="day-name">Mié</div>
+                <div class="day-name">Jue</div>
+                <div class="day-name">Vie</div>
+                <div class="day-name">Sáb</div>
+                <div class="day-name">Dom</div>
+            </div>
+            <div id="days" role="grid" aria-label="Días del mes"></div>
+            <div id="eventInfo" role="status" aria-live="polite" aria-atomic="true">Haz clic en un día para ver el evento</div>
+        </div>
+    </section>
+    
+    <section class="eventos-contenedor" aria-label="Galería de eventos destacados">
+        <div><img src="imagenes/concurso.jpg" alt="Concurso Sity-Pó Stars" class="evento"></div>
+        <div><img src="imagenes/oshinoko.jpg" alt="Noche de Anime" class="evento"></div>
+        <div><img src="imagenes/patatas.png" alt="Patatas ilimitadas" class="evento"></div>
+        <div><img src="imagenes/sutopuri.jpg" alt="Colaboración con Strawberry Prince" class="evento"></div>
+        <div><img src="imagenes/puerto.png" alt="Colaboración con Puerto de Indias" class="evento"></div>
+        <div><img src="imagenes/darkmoon.jpg" alt="Evento de K-pop" class="evento"></div>
+    </section>
+</main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <div>
+            <p>&copy; 2026 Sity-Pó Karaoke. Todos los derechos reservados.</p>
+            <address>
+                <p>Contacto: <a href="mailto:karaoke.sitypo@gmail.com">karaoke.sitypo@gmail.com</a></p>
+            </address>
+        </div>
+        <div class="accesibilidad-footer">
+            <div class="accesibilidad-controls">
+                <button id="aumentar-letra" aria-label="Aumentar tamaño de letra">A+</button>
+                <button id="disminuir-letra" aria-label="Disminuir tamaño de letra">A-</button>
+                <button id="reset-letra" aria-label="Restablecer tamaño de letra">A</button>
+                <button id="alto-contraste" aria-label="Activar modo alto contraste">Contraste</button>
+                <button id="daltonico" aria-label="Activar modo para daltónicos">Daltónico</button>
+            </div>
+        </div>
+        <div>
+            <a href="#top" class="volver-arriba">
+                <img src="imagenes/Mari-Cartel.png" alt="Volver arriba" style="width: 130px; height: auto;">
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/calendario.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Librerías externas -->
+    <script src="https://kit.fontawesome.com/c501f28f64.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/icono.png" type="image/x-icon">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/pablo.css">
+    <link rel="stylesheet" href="css/comun.css">
+    <!-- Scripts -->
+    <script src="js/accesibilidad.js" defer></script>
+    <!-- Título de la página -->
+    <title>Sity-Pó Karaoke - Reservas</title>
+</head>
+<body>
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header id="top">
+        <nav aria-label="Menú principal">
+            <!-- Logo del sitio -->
+            <h1 class="titulo">Reserva Sity-Pó</h1>
+
+            <!-- Menú de navegación principal -->
+            <ul class="menu">
+                <!-- Enlace Inicio -->
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house icono casa"></i>
+                        Inicio
+                    </a>
+                </li>
+
+                <!-- Enlace Salas -->
+                <li>
+                    <a href="salas.html">
+                        <i class="fa-solid fa-door-open icono puerta"></i>
+                        Habitaciones e Instalaciones
+                    </a>
+                </li>
+
+                <!-- Enlace Ubicaciones -->
+                <li>
+                    <a href="Ubicaciones.html">
+                        <i class="fa-solid fa-location-dot icono ubicacion"></i>
+                        Ubicaciones
+                    </a>
+                </li>
+
+                <!-- Enlace Eventos -->
+                <li>
+                    <a href="Eventos.html">
+                        <i class="fa-solid fa-star icono calendario"></i>
+                        Eventos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN FORMULARIO DE RESERVAS -->
+    <section id="reservas">
+        <div class="caseta">
+            <!-- Encabezado del formulario -->
+            <div class="techo">
+                <h2>Reserva tu Sala</h2>
+            </div>
+
+            <!-- Cuerpo del formulario -->
+            <div class="cuerpo">
+                <!-- Formulario de reserva con validación -->
+                <form action="" method="post">
+                    <!-- BLOQUE 1: Datos Personales del cliente -->
+                    <fieldset class="formulario">
+                        <legend>Datos Personales</legend>
+
+                        <!-- Campo nombre completo -->
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <!-- Campo email -->
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <!-- Campo teléfono -->
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </fieldset>
+                    <!-- BLOQUE 2: Detalles de la Reserva -->
+                    <fieldset class="formulario">
+                        <legend>Detalles de la Reserva</legend>
+
+                        <!-- Selector de ubicación -->
+                        <label for="instalacion">Selecciona la instalación:</label>
+                        <select id="instalacion" name="instalacion" required>
+                            <option value="">-- Elige una ubicación --</option>
+                            <option value="norte">
+                                Sity-Pó Norte - Avenida Puerta Europa 23, Jerez de la Frontera
+                            </option>
+                            <option value="sur">
+                                Sity-Pó Sur - Calle Sur 3, Puerto Real
+                            </option>
+                            <option value="centro">
+                                Sity-Pó Centro - Calle Real 5, San Fernando
+                            </option>
+                        </select>
+
+                        <!-- Campo fecha de reserva -->
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required>
+
+                        <!-- Campo hora de reserva -->
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora" required>
+
+                        <!-- Campo número de personas -->
+                        <label for="personas">Número de personas:</label>
+                        <input type="number" id="personas" name="personas" min="1" max="20" required>
+
+                        <!-- Selector tipo de sala (Estándar, Premium, VIP) -->
+                        <label for="sala">Tipo de sala:</label>
+                        <select id="sala" name="sala">
+                            <option value="estandar">Sala Estándar</option>
+                            <option value="premium">Sala Premium</option>
+                            <option value="vip">Sala VIP</option>
+                        </select>
+                    </fieldset>                    <!-- BLOQUE 3: Servicios Adicionales Opcionales -->
+                    <fieldset class="formulario">
+                        <legend>Extras</legend>
+
+                        <!-- Opción decoración especial -->
+                        <label>
+                            <input type="checkbox" name="extras" value="decoracion">
+                            Decoración especial
+                        </label>
+
+                        <!-- Opción pack cumpleaños -->
+                        <label>
+                            <input type="checkbox" name="extras" value="cumpleanos">
+                            Pack cumpleaños
+                        </label>
+
+                        <!-- Opción servicio de catering -->
+                        <label>
+                            <input type="checkbox" name="extras" value="catering">
+                            Servicio de catering
+                        </label>
+                    </fieldset>                    <!-- BLOQUE 4: Comentarios y Peticiones Especiales -->
+                    <fieldset class="formulario">
+                        <legend>Comentarios</legend>
+
+                        <!-- Campo de texto para peticiones especiales -->
+                        <label>
+                            Comentarios o peticiones especiales:
+                            <textarea name="comentarios" rows="4" cols="50" placeholder="Escribe aquí cualquier petición especial..."></textarea>
+                        </label>
+                    </fieldset>
+
+                    <!-- Botón de envío del formulario -->
+                    <button class="BReserva" type="submit" aria-label="Confirmar reserva">Confirmar Reserva</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <!-- Información de copyright y contacto -->
+        <div>
+            <p>&copy; 2026 Sity-Pó Karaoke. Todos los derechos reservados.</p>
+            <address>
+                <p>Contacto: <a href="mailto:karaoke.sitypo@gmail.com">karaoke.sitypo@gmail.com</a></p>
+            </address>
+        </div>
+
+        <div class="accesibilidad-footer">
+            <div class="accesibilidad-controls">
+                <button id="aumentar-letra" aria-label="Aumentar tamaño de letra">A+</button>
+                <button id="disminuir-letra" aria-label="Disminuir tamaño de letra">A-</button>
+                <button id="reset-letra" aria-label="Restablecer tamaño de letra">A</button>
+                <button id="alto-contraste" aria-label="Activar modo alto contraste">Contraste</button>
+                <button id="daltonico" aria-label="Activar modo para daltónicos">Daltónico</button>
+            </div>
+        </div>
+        
+        <!-- Botón para volver al inicio -->
+        <div>
+            <a href="#top" class="volver-arriba">
+                <img src="imagenes/Mari-Cartel.png" alt="Volver arriba">
+            </a>
+        </div>
+    </footer>
+
+    <!-- POP-UP DE MENSAJE -->
+    <div id="popupMensaje" class="popup-mensaje" role="alertdialog" aria-modal="true" aria-labelledby="popupTitulo" aria-describedby="popupContenido" tabindex="-1">
+        <div class="popup-contenido">
+            <button type="button" class="popup-cerrar" id="cerrarPopup" aria-label="Cerrar">&times;</button>
+
+            <div class="popup-texto">
+                <h3 id="popupTitulo">-</h3>
+                <p id="popupContenido" aria-live="assertive"></p>
+            </div>
+
+            <div class="popup-mascota">
+                <img id="mascotaPopup" src="imagenes/mascota-ok.png" alt="Mascota Sity-Pó">
+            </div>
+        </div>
+    </div>
+
+    <!-- Script de validación del formulario -->
+    <script src="js/validacion.js"></script>
+</body>
+</html>

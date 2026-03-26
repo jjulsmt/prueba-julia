@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción">
+
+    <!-- Librerias externas -->
+    <script src="https://kit.fontawesome.com/c501f28f64.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/icono.png" type="image/x-icon">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/pablo.css">
+    <link rel="stylesheet" href="css/comun.css">
+    
+    <!-- Scripts diferidos -->
+    <script src="js/carrusel.js" defer></script>
+    <script src="js/accesibilidad.js"></script>
+    <!-- Título de la página -->
+    <title>Sity-Pó Karaoke</title>
+</head>
+<body>
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header id="top">
+        <nav aria-label="Menú principal">
+            <!-- Logo del sitio -->
+            <h1 class="titulo">Sity-Pó</h1>
+
+            <!-- Menú de navegación principal -->
+            <ul class="menu">
+
+                <!-- Enlace Salas -->
+                <li>
+                    <a href="salas.html">
+                        <i class="fa-solid fa-door-open icono puerta"></i>
+                        Habitaciones e Instalaciones
+                    </a>
+                </li>
+
+                <!-- Enlace Ubicaciones -->
+                <li>
+                    <a href="Ubicaciones.html">
+                        <i class="fa-solid fa-location-dot icono ubicacion"></i>
+                        Ubicaciones
+                    </a>
+                </li>
+
+                <!-- Enlace Eventos -->
+                <li>
+                    <a href="Eventos.html">
+                        <i class="fa-solid fa-star icono estrella"></i>
+                        Eventos
+                    </a>
+                </li>
+
+                <!-- Enlace Reservas -->
+                <li>
+                    <a href="reserva.html">
+                        <i class="fa-solid fa-calendar icono calendario"></i>
+                        Reservar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN CARRUSEL - Presentación de ofertas y eventos principales -->
+    <section id="inicio">
+        <div class="carrusel">
+            <!-- Botón navegación anterior -->
+            <button type="button" class="btn prev" aria-label="Anterior">&#10094;</button>
+
+            <!-- Contenedor visible del carrusel -->
+            <div class="viewport">
+                <!-- Pista deslizable con los slides -->
+                <div class="pista">
+                    <!-- Slide 1: Noche de Anime con video embebido -->
+                    <div class="slide">
+                        <iframe title="Playlist de YouTube - Noche de Anime" src="https://www.youtube.com/embed/videoseries?list=PLxcCUwfX_nENDJXgTYBK-ZWnRX4IJYGUD"></iframe>
+                        <div class="overlay">
+                            <h2>Noche de Anime</h2>
+                            <p>Disfruta de una noche especial dedicada a tus series y películas favoritas de anime.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: Salas Privadas -->
+                    <div class="slide">
+                        <img src="imagenes/karaokes-en-Tokio.jpg" alt="Sala privada estilo japonés">
+                        <div class="overlay">
+                            <h2>Salas Privadas</h2>
+                            <p>Ambiente íntimo al estilo karaoke japonés con esencia andaluza.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Eventos Especiales -->
+                    <div class="slide">
+                        <img src="imagenes/karaoke-perdidos-en-tokio.jpg" alt="Evento karaoke en grupo">
+                        <div class="overlay">
+                            <h2>Eventos Especiales</h2>
+                            <p>Celebra cumpleaños y despedidas con luz neón y alegría sureña.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4: Reserva Online -->
+                    <div class="slide">
+                        <img src="imagenes/karaokes-en-Tokio.jpg" alt="Reserva online">
+                        <div class="overlay">
+                            <h2>Reserva Online</h2>
+                            <p>Reserva tu sala en segundos y empieza la fiesta.</p>
+                            <button class="cta">¡Reserva ahora!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón navegación siguiente -->
+            <button type="button" class="btn next" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PRINCIPAL CON DOS COLUMNAS -->
+    <div class="layout-principal">
+        <!-- COLUMNA LATERAL: Contenido educativo y curiosidades -->
+        <aside>
+                <h2>Contenido Relacionado</h2>
+
+            <!-- Artículo 1: Canciones populares -->
+            <article>
+                <h3>Top 5 Canciones Más Cantadas</h3>
+                <p>
+                    Descubre cuáles son las canciones favoritas en Sity-Pó Karaoke este mes.
+                    Desde clásicos del pop hasta openings de anime.
+                </p>
+                <a href="https://neox.atresmedia.com/games/anime-manga/10-canciones-anime-que-son-exito-karaokes-japoneses_2022020161f95f946f203000013ab624.html" style="color:#ffe766;">Ver más</a>
+            </article>
+
+            <!-- Artículo 2: Origen del karaoke -->
+            <article>
+                <h3>¿Sabías que el Karaoke nació en Japón?</h3>
+                <p>
+                    El karaoke se originó en Japón en los años 70 y se convirtió
+                    en una de las actividades sociales más populares del país.
+                </p>
+                <a href="https://www.wipo.int/es/web/wipo-magazine/articles/the-father-of-karaoke-36671" style="color:#ffe766">Leer más</a>
+            </article>
+
+            <!-- Artículo 3: Tips de técnica vocal -->
+            <article>
+                <h3>Consejos para Mejorar tu Voz</h3>
+                <p>
+                    Aprende técnicas básicas de respiración y control vocal
+                    para brillar en tu próxima actuación.
+                </p>
+                <a href="https://www.vozviva.es/como-mejorar-la-voz/" style="color:#ffe766">Descubrir</a>
+            </article>
+        </aside>
+
+        <!-- COLUMNA PRINCIPAL: Noticias y próximos eventos -->
+        <section id="noticias">
+            <h2 style="color: #29f0cc">Noticias y Próximos Eventos</h2>
+
+            <!-- Contenedor con grid de eventos destacados -->
+            <div class="contenedor-noticias">
+                <!-- Evento 1: Noche del Anime -->
+                <a href="Eventos.html#evento1" class="bloque-noticia">
+                    <article>
+                        <h3 style="color: #ffe766">Noche del Anime</h3>
+                        <p class="fecha">15 de Marzo</p>
+                        <p>Especial openings y endings de tus series favoritas.</p>
+                    </article>
+                </a>
+
+                <!-- Evento 2: Concurso Sity-Pó Stars -->
+                <a href="Eventos.html#evento2" class="bloque-noticia">
+                    <article>
+                        <h3 style="color: #ffe766">Concurso Sity-Pó Stars</h3>
+                        <p class="fecha">22 de Marzo</p>
+                        <p>Compite y gana premios cantando tus mejores canciones.</p>
+                    </article>
+                </a>
+
+                <!-- Evento 3: Happy Hour Primavera -->
+                <a href="Eventos.html#evento3" class="bloque-noticia">
+                    <article>
+                        <h3 style="color: #ffe766">Happy Hour Primavera</h3>
+                        <p class="fecha">Disponible todo el mes</p>
+                        <p>Descuentos especiales en reservas grupales.</p>
+                    </article>
+                </a>
+            </div>
+        </section>
+    </div>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <!-- Información de copyright y contacto -->
+        <div>
+            <p>&copy; 2026 Sity-Pó Karaoke. Todos los derechos reservados.</p>
+            <address>
+                <p>Contacto: <a href="mailto:karaoke.sitypo@gmail.com">karaoke.sitypo@gmail.com</a></p>
+            </address>
+        </div>
+
+        <div class="accesibilidad-footer">
+            <div class="accesibilidad-controls">
+                <button id="aumentar-letra" aria-label="Aumentar tamaño de letra">A+</button>
+                <button id="disminuir-letra" aria-label="Disminuir tamaño de letra">A-</button>
+                <button id="reset-letra" aria-label="Restablecer tamaño de letra">A</button>
+                <button id="alto-contraste" aria-label="Activar modo alto contraste">Contraste</button>
+                <button id="daltonico" aria-label="Activar modo para daltónicos">Daltónico</button>
+            </div>
+        </div>
+
+        <!-- Botón para volver al inicio -->
+        <div>
+            <a href="#top" class="volver-arriba">
+                <img src="imagenes/Mari-Cartel.png" alt="Volver arriba">
+            </a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

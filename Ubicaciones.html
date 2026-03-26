@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción">
+    <script src="https://kit.fontawesome.com/c501f28f64.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="imagenes/icono.png" type="image/x-icon">
+    <title>Sity-Pó Karaoke - Ubicaciones</title>
+    <link rel="stylesheet" href="css/julia.css">
+    <link rel="stylesheet" href="css/comun.css">
+    <script src="js/accesibilidad.js"></script>
+</head>
+<body>
+    <header id="top" role="banner">
+        <h1 class="titulo">Ubicaciones Sity-Pó</h1>
+        <nav aria-label="Navegación principal">
+            <ul class="menu">
+            <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-house icono casa" aria-hidden="true"></i>
+                    Inicio
+                </a>
+            </li>
+
+            <li>
+                <a href="salas.html">
+                    <i class="fa-solid fa-door-open icono puerta" aria-hidden="true"></i>
+                    Habitaciones e Instalaciones
+                </a>
+            </li>
+
+             <li>
+                <a href="Eventos.html">
+                    <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    Eventos
+                </a>
+            </li>
+
+            <li>
+                <a href="reserva.html">
+                    <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+                    Reservar
+                </a>
+            </li>
+
+            </ul>
+
+            </nav>
+    </header>
+
+    <main class="contenedor" aria-label="Ubicaciones disponibles">
+    <!-- SVG DE LOS KARAOKES -->
+        <section class="salas-mapa" aria-label="Mapa de ubicaciones">
+    <div>
+      <svg viewBox="0 -20 300 500" class="mapa-salas" role="img" aria-label="Mapa interactivo de salas">
+        <!-- SALA 1 JEREZ -->
+        <path id="sala-jerez" 
+              d="M37.7852 137.453L2.3192 86.9885C-0.822812 82.5178 0.205717 76.3527 4.62891 73.1441L102.143 2.40633C106.66 -0.871025 112.987 0.184396 116.196 4.7509L151.662 55.2153C154.804 59.6861 153.775 65.8511 149.352 69.0598L51.8387 139.798C47.3208 143.075 40.9945 142.019 37.7852 137.453Z" 
+              fill="#ff90d7" stroke="#333" stroke-width="2"/>
+        
+        <!-- SALA 2 SAN FERNANDO -->
+        <path id="sala-sf" 
+              d="M129.785 345.943L93.9894 296.059C90.7957 291.608 91.7773 285.416 96.191 282.172L183.619 217.9C188.105 214.602 194.421 215.603 197.667 220.127L233.463 270.012C236.656 274.462 235.675 280.654 231.261 283.899L143.833 348.17C139.347 351.468 133.031 350.467 129.785 345.943Z" 
+              fill="#3ac4ff" stroke="#333" stroke-width="2"/>
+        
+        <!-- SALA 3 PUERTO REAL -->
+        <path id="sala-pr" 
+              d="M110.486 265.707L91.3495 279.312C86.8832 282.488 80.6934 281.477 77.4692 277.046L12.4493 187.691C9.17449 183.19 10.2045 176.882 14.7408 173.657L33.8771 160.052C38.3433 156.877 44.5331 157.887 47.7574 162.318L112.777 251.673C116.052 256.174 115.022 262.482 110.486 265.707Z" 
+              fill="#ffe766" stroke="#333" stroke-width="2"/>
+        
+        <!-- SALA 4 CADIZ -->
+        <path id="sala-cadiz" 
+              d="M228.985 418.435L207.717 433.749C203.261 436.957 197.052 435.972 193.807 431.543L146.528 367.01C143.245 362.529 144.244 356.231 148.752 352.985L170.021 337.672C174.476 334.464 180.686 335.448 183.93 339.877L231.209 404.41C234.492 408.891 233.493 415.189 228.985 418.435Z" 
+              fill="#29f0cc" stroke="#333" stroke-width="2"/>
+        
+        <!-- SALA 5 CHICLANA -->
+        <path id="sala-chiclana" 
+              d="M77.9407 191.594C70.1676 181.009 61.0416 168.874 53.2855 158.309C50.0426 153.892 51.0244 147.699 55.4383 144.451L79.1783 126.985C88.5821 120.067 94.7928 115.367 102.66 109.516C107.127 106.194 113.443 107.188 116.737 111.674C124.518 122.27 133.656 134.42 141.42 144.996C144.657 149.406 143.687 155.587 139.287 158.839L92.0503 193.761C87.5673 197.075 81.2406 196.087 77.9407 191.594Z" 
+              fill="#cc78ff" stroke="#333" stroke-width="2"/>
+        
+        <!-- SALA 6 CONIL -->
+        <path id="sala-conil" 
+              d="M131.388 248.007C126.941 251.279 120.683 250.328 117.41 245.882L92.9311 212.637C89.6556 208.189 90.6077 201.927 95.0576 198.653L143.306 163.156C147.753 159.884 154.011 160.836 157.285 165.282L181.763 198.526C185.039 202.975 184.087 209.236 179.637 212.51L131.388 248.007Z" 
+              fill="#ffa65d" stroke="#333" stroke-width="2"/>
+      </svg>
+      </div>
+    </section>
+
+      <!-- LEYENDA -->
+            <div class="leyenda" role="list" aria-label="Leyenda de colores por ubicación">
+                <div role="listitem"><span class="sala-jerez" aria-hidden="true"></span> Jerez de La Frontera</div>
+                <div role="listitem"><span class="sala-chiclana" aria-hidden="true"></span> Cádiz</div>
+                <div role="listitem"><span class="sala-pr" aria-hidden="true"></span> Puerto Real</div>
+                <div role="listitem"><span class="sala-conil" aria-hidden="true"></span> Conil</div>
+                <div role="listitem"><span class="sala-cadiz" aria-hidden="true"></span> Chiclana</div>
+                <div role="listitem"><span class="sala-sf" aria-hidden="true"></span> San Fernando</div>
+      </div>
+    
+    <a href="reserva.html" class="btn-reserva">Reservar Sala</a>
+  </main>
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <!-- Información de copyright y contacto -->
+        <div>
+            <p>&copy; 2026 Sity-Pó Karaoke. Todos los derechos reservados.</p>
+            <address>
+                <p>Contacto: <a href="mailto:karaoke.sitypo@gmail.com">karaoke.sitypo@gmail.com</a></p>
+            </address>
+        </div>
+
+        <div class="accesibilidad-footer">
+            <div class="accesibilidad-controls">
+                <button id="aumentar-letra" aria-label="Aumentar tamaño de letra">A+</button>
+                <button id="disminuir-letra" aria-label="Disminuir tamaño de letra">A-</button>
+                <button id="reset-letra" aria-label="Restablecer tamaño de letra">A</button>
+                <button id="alto-contraste" aria-label="Activar modo alto contraste">Contraste</button>
+                <button id="daltonico" aria-label="Activar modo para daltónicos">Daltónico</button>
+            </div>
+        </div>
+
+        <!-- Botón para volver al inicio -->
+        <div>
+            <a href="#top" class="volver-arriba">
+                <img src="imagenes/Mari-Cartel.png" alt="Volver arriba">
+            </a>
+        </div>
+    </footer>
+</body>
+</html>
