@@ -1,0 +1,1165 @@
+:root {
+        --font-size: 16px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+    --font-size: 16px;
+}
+
+html{
+    font-size: var(--font-size);
+}
+
+
+html {
+        font-size: var(--font-size);
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: white;
+  min-height: 100vh;
+  background-color: #202248;
+    font-size: var(--font-size);
+}
+
+/* INDEX */
+
+/* SECCIÓN CARRUSEL*/
+#inicio {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #0f1020, #1a1b3a);
+}
+
+/* CONTENEDOR */
+.carrusel {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+}
+
+/* VENTANA */
+.viewport {
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+/* PISTA */
+.pista {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* SLIDE */
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+/* IMAGEN PROTAGONISTA */
+.slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+    box-shadow:
+        0 0 30px rgba(255, 46, 136, 0.4),
+        0 0 60px rgba(249, 145, 57, 0.3);
+}
+.slide iframe {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+    box-shadow:
+        0 0 30px rgba(255, 46, 136, 0.4),
+        0 0 60px rgba(249, 145, 57, 0.3);
+}
+
+/* OVERLAY TEXTO */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
+
+    background: linear-gradient(to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.4),
+        transparent);
+
+    color: white;
+}
+
+/* TÍTULO NEÓN */
+.overlay h2 {
+    font-size: 2.5rem;
+    text-shadow: #00ffc8 0 0 5px;
+}
+
+/* TEXTO */
+.overlay p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* BOTÓN CTA */
+.cta {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(45deg, #ff2e88, #F99139);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow:
+        0 0 15px #ff2e88,
+        0 0 30px #F99139;
+    transition: 0.3s;
+}
+
+.cta:hover {
+    transform: scale(1.05);
+}
+
+/* BOTONES NAVEGACIÓN */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #00ffc8;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 10;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    box-shadow: #ffe766 0 0 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ffe766;
+    color: black;
+}
+
+.prev { left: -30px; }
+.next { right: -30px; }
+
+/* LAYOUT PRINCIPAL */
+
+.layout-principal {
+    width: 100%;
+    max-width: 1600px;
+    margin-left: 20px ;
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    padding: 40px 20px; 
+}
+
+/* ASIDE (SECUNDARIO) */
+
+aside {
+    flex: 0 0 280px;
+    padding: 30px;
+    border-radius: 35px;
+    background: rgba(20, 10, 40, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: #00ffc8 0 0 15px;
+    color: white;
+}
+
+aside h2 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: #00ffc8 0 0 10px;
+}
+
+aside article {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #ffe766;
+    transition: 0.3s ease;
+}
+
+aside article:hover {
+    transform: translateY(-5px);
+    box-shadow: #ffe766 0 0 20px;
+}
+
+aside h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+aside p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #e5e5e5;
+}
+
+aside a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F99139;
+    transition: 0.3s;
+}
+
+aside a:hover {
+    color: #ff2e88;
+}
+
+/* NOTICIAS (PRINCIPAL) */
+
+#noticias {
+    flex: 3;
+    width: 900px;
+}
+
+#noticias h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    text-shadow: #00ffc8 0 0 10px;
+}
+
+/* columna vertical */
+.contenedor-noticias {
+    display: flex;
+    flex-direction: column;   
+    gap: 40px;
+    margin-right: 70px;
+}
+
+/* BLOQUES */
+.bloque-noticia {
+    text-decoration: none;
+    color: inherit;
+}
+
+.bloque-noticia article {
+    padding: 40px;
+    border-radius: 35px;
+
+    /* MISMO FONDO QUE ASIDE */
+    background: rgba(20, 10, 40, 0.85);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 46, 136, 0.2);
+
+    transition: 0.4s ease;
+
+    box-shadow: #ffe766 0 0 15px;
+}
+
+/* Hover elegante */
+.bloque-noticia article:hover {
+    transform: translateY(-8px);
+    box-shadow: #00ffc8 0 0 25px;
+}
+
+/* TÍTULO */
+.bloque-noticia h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+
+    text-shadow: 0 0 5px #ebd03a;
+}
+
+/* FECHA */
+.fecha {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffbd42;
+}
+
+/* TEXTO */
+.bloque-noticia p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e5e5e5;
+}
+
+
+
+/* RESERVAS */
+
+/* POP-UP Validación formulario */
+.popup-mensaje {
+    display: none; /* oculto por defecto */
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* CUADRO CENTRAL */
+.popup-contenido {
+    width: 350px; /* cuadrado aproximado */
+    max-width: 90%;
+    background: linear-gradient(135deg,#1a0033,#3a0066,#001a3a);
+    border: 2px solid #ff4fd8;
+    border-radius: 16px;
+    box-shadow: 0 0 15px #ff4fd8, 0 0 30px #00eaff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #fff;
+}
+
+/* BOTÓN CERRAR */
+.popup-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #ff4fd8;
+    cursor: pointer;
+}
+
+/* TEXTO */
+.popup-texto h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    color: #00eaff;
+    text-align: center;
+}
+
+.popup-texto p {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* MASCOTA */
+.popup-mascota img {
+    width: 120px; /* mascota más grande */
+    height: auto;
+    filter: drop-shadow(0 0 8px #ff4fd8);
+}
+
+/* ESTADOS */
+.popup-error .popup-contenido {
+    border-color:#ff4f7a;
+    box-shadow:0 0 15px #ff4f7a,0 0 30px #ff4fd8;
+}
+
+.popup-ok .popup-contenido {
+    border-color:#00ffc8;
+    box-shadow:0 0 15px #00ffc8,0 0 30px #00eaff;
+}
+
+/* =========================================
+   RESERVAS - CITY POP 
+   ========================================= */
+
+#reservas {
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #0f1020, #1a1b3a);
+    min-height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* CONTENEDOR INTERNO CON CASETA */
+.contenedor-reservas {
+    flex: 0 1 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IMÁGENES LATERALES */
+.imagen-lateral {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen-lateral img {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow:
+        0 0 30px rgba(255, 46, 136, 0.4),
+        0 0 60px rgba(249, 145, 57, 0.3);
+    transition: 0.4s ease;
+    animation: float-image 3s ease-in-out infinite;
+}
+
+.imagen-lateral img:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 40px rgba(255, 46, 136, 0.6),
+        0 0 80px rgba(249, 145, 57, 0.5);
+}
+
+/* ANIMACIÓN FLOTANTE PARA IMÁGENES */
+@keyframes float-image {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.imagen-lateral.izquierda img {
+    animation: float-image-left 3.5s ease-in-out infinite;
+}
+
+.imagen-lateral.derecha img {
+    animation: float-image-right 3.5s ease-in-out infinite;
+}
+
+@keyframes float-image-left {
+    0%, 100% {
+        transform: translateY(0px) rotateZ(-2deg);
+    }
+    50% {
+        transform: translateY(-15px) rotateZ(-2deg);
+    }
+}
+
+@keyframes float-image-right {
+    0%, 100% {
+        transform: translateY(0px) rotateZ(2deg);
+    }
+    50% {
+        transform: translateY(-15px) rotateZ(2deg);
+    }
+}
+
+/* CONTENEDOR PRINCIPAL DEL FORMULARIO */
+.caseta {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow:
+        0 0 40px rgba(255, 46, 136, 0.5),
+        0 0 80px rgba(249, 145, 57, 0.3),
+        0 0 120px rgba(152, 76, 199, 0.2);
+    animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* ANIMACIÓN GLOW PULSANTE */
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow:
+            0 0 40px rgba(255, 46, 136, 0.5),
+            0 0 80px rgba(249, 145, 57, 0.3),
+            0 0 120px rgba(152, 76, 199, 0.2);
+    }
+    50% {
+        box-shadow:
+            0 0 50px rgba(255, 46, 136, 0.7),
+            0 0 100px rgba(249, 145, 57, 0.5),
+            0 0 150px rgba(152, 76, 199, 0.3);
+    }
+}
+
+/* ENCABEZADO DEL FORMULARIO */
+.techo {
+    background: linear-gradient(135deg, #ff2e88, #F99139);
+    padding: 30px;
+    text-align: center;
+}
+
+.techo h2 {
+    margin: 0;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow:
+        0 0 10px rgba(0, 0, 0, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* CUERPO DEL FORMULARIO */
+.cuerpo {
+    background: rgba(15, 16, 32, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border: 1px solid rgba(255, 46, 136, 0.3);
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* FIELDSETS */
+.formulario {
+    border: 2px solid rgba(255, 46, 136, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    background: rgba(20, 10, 40, 0.6);
+    transition: 0.3s ease;
+}
+
+.formulario:hover {
+    border-color: rgba(249, 145, 57, 0.6);
+    box-shadow:
+        0 0 15px rgba(249, 145, 57, 0.2),
+        0 0 30px rgba(255, 46, 136, 0.15);
+}
+
+/* LEGEND */
+.formulario legend {
+    color: #F99139;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow:
+        0 0 5px #F99139,
+        0 0 10px rgba(255, 46, 136, 0.4);
+}
+
+/* LABELS */
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    color: #e5e5e5;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS, SELECT, TEXTAREA */
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 46, 136, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #e5e5e5;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: #F99139;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 0 10px rgba(249, 145, 57, 0.4),
+        0 0 20px rgba(255, 46, 136, 0.2);
+}
+
+.formulario input::placeholder {
+    color: rgba(229, 229, 229, 0.5);
+}
+
+/* CHECKBOXES Y RADIO BUTTONS */
+.formulario input[type="checkbox"],
+.formulario input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+    margin-bottom: 0;
+    cursor: pointer;
+    accent-color: #F99139;
+}
+
+.formulario label:has(input[type="checkbox"]),
+.formulario label:has(input[type="radio"]) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.formulario label:has(input[type="checkbox"]):hover,
+.formulario label:has(input[type="radio"]):hover {
+    color: #F99139;
+    text-shadow: 0 0 10px rgba(249, 145, 57, 0.4);
+}
+
+/* TEXTAREA ESPECÍFICO */
+.formulario textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* BOTÓN DE RESERVA */
+.BReserva {
+    padding: 15px 40px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #ff2e88, #F99139);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow:
+        0 0 15px rgba(255, 46, 136, 0.5),
+        0 0 30px rgba(249, 145, 57, 0.3);
+}
+
+.BReserva:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow:
+        0 0 20px rgba(255, 46, 136, 0.8),
+        0 0 40px rgba(249, 145, 57, 0.6),
+        0 0 60px rgba(152, 76, 199, 0.3);
+}
+
+.BReserva:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ========================================= */
+
+/* ===== TABLET (768px a 1023px) ===== */
+
+@media (max-width: 1023px) {
+    
+    /* ---- Carrusel INDEX ---- */
+    #inicio {
+        padding: 60px 0;
+    }
+
+    .carrusel {
+        width: 95%;
+        max-width: 100%;
+    }
+
+    .slide img,
+    .slide iframe {
+        height: 350px;
+        border-radius: 25px;
+    }
+
+    .overlay {
+        padding: 30px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .overlay h2 {
+        font-size: 1.8rem;
+    }
+
+    .overlay p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .prev { left: -20px; }
+    .next { right: -20px; }
+
+    /* ---- Layout Principal INDEX ---- */
+    .layout-principal {
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 0;
+        gap: 30px;
+        padding: 30px 15px;
+        align-items: center;
+    }
+
+    aside {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #noticias {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #noticias h2 {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    /* ---- Reservas PAGE ---- */
+    #reservas {
+        padding: 60px 15px;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-reservas {
+        flex: 0 1 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .caseta {
+        max-width: 100%;
+    }
+
+    .techo h2 {
+        font-size: 1.5rem;
+    }
+
+    .cuerpo {
+        padding: 30px;
+    }
+
+    .imagen-lateral {
+        display: none;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .formulario legend {
+        font-size: 1rem;
+    }
+
+    .formulario label {
+        font-size: 0.9rem;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+
+    .BReserva {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* ===== MÓVIL (Menor de 768px) ===== */
+
+@media (max-width: 767px) {
+    
+    body {
+        font-size: calc(var(--font-size) - 2px);
+    }
+
+    /* ---- Carrusel INDEX ---- */
+    #inicio {
+        padding: 40px 0;
+    }
+
+    .carrusel {
+        width: 98%;
+        max-width: 100%;
+    }
+
+    .slide img,
+    .slide iframe {
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .viewport {
+        border-radius: 20px;
+    }
+
+    .overlay {
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .overlay h2 {
+        font-size: 1.3rem;
+        text-shadow:
+            0 0 3px #F99139,
+            0 0 8px #ff2e88;
+    }
+
+    .overlay p {
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+
+    .cta {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    .prev { left: -10px; }
+    .next { right: -10px; }
+
+    /* ---- Layout Principal INDEX ---- */
+    .layout-principal {
+        flex-direction: column;
+        max-width: 100%;
+        margin-left: 0;
+        gap: 20px;
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    aside {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 500px;
+        padding: 20px;
+        border-radius: 25px;
+    }
+
+    aside h2 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+    }
+
+    aside article {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    aside h3 {
+        font-size: 1rem;
+    }
+
+    aside p {
+        font-size: 0.85rem;
+    }
+
+    #noticias {
+        flex: 1 1 100%;
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #noticias h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+    }
+
+    .contenedor-noticias {
+        gap: 25px;
+    }
+
+    .bloque-noticia article {
+        padding: 25px;
+        border-radius: 25px;
+    }
+
+    .bloque-noticia h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .fecha {
+        font-size: 0.85rem;
+    }
+
+    .bloque-noticia p {
+        font-size: 0.9rem;
+    }
+
+    /* ---- Reservas PAGE ---- */
+    #reservas {
+        padding: 40px 15px;
+        min-height: auto;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-reservas {
+        flex: 0 1 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        order: 1;
+    }
+
+    .caseta {
+        width: 100%;
+        border-radius: 25px;
+    }
+
+    .techo {
+        padding: 20px;
+        border-radius: 25px 25px 0 0;
+    }
+
+    .techo h2 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .cuerpo {
+        padding: 20px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    form {
+        gap: 20px;
+    }
+
+    .formulario {
+        border: 2px solid rgba(255, 46, 136, 0.3);
+        border-radius: 15px;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .formulario legend {
+        font-size: 0.95rem;
+        letter-spacing: 0.5px;
+    }
+
+    .formulario label {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        padding: 10px 12px;
+        margin-bottom: 12px;
+        border-radius: 10px;
+        font-size: 0.85rem;
+    }
+
+    .formulario textarea {
+        min-height: 80px;
+    }
+
+    .formulario input[type="checkbox"],
+    .formulario input[type="radio"] {
+        margin-right: 8px;
+    }
+
+    .formulario label:has(input[type="checkbox"]),
+    .formulario label:has(input[type="radio"]) {
+        margin-bottom: 10px;
+        font-size: 0.85rem;
+    }
+
+    .BReserva {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+        border-radius: 20px;
+        margin-top: 10px;
+    }
+
+    .BReserva:hover {
+        transform: scale(1.03) translateY(-2px);
+    }
+
+    .imagen-lateral {
+        display: none;
+    }
+
+    /* ---- PopUp ---- */
+    .popup-contenido {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .popup-texto h3 {
+        font-size: 18px;
+    }
+
+    .popup-mascota img {
+        width: 100px;
+    }
+}
+
+/* ===== MÓVIL PEQUEÑO (Menor de 480px) ===== */
+
+@media (max-width: 479px) {
+    
+    /* ---- Carrusel INDEX ---- */
+    .slide img,
+    .slide iframe {
+        height: 200px;
+    }
+
+    .overlay h2 {
+        font-size: 1.1rem;
+    }
+
+    .overlay p {
+        font-size: 0.8rem;
+        display: none; /* Ocultar párrafo en móviles muy pequeños */
+    }
+
+    .cta {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* ---- INDEX ---- */
+    aside {
+        padding: 15px;
+    }
+
+    aside h2 {
+        font-size: 1.1rem;
+    }
+
+    #noticias h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    .bloque-noticia article {
+        padding: 20px;
+    }
+
+    .bloque-noticia h3 {
+        font-size: 1.1rem;
+    }
+
+    /* ---- Reservas PAGE ---- */
+    #reservas {
+        padding: 30px 10px;
+    }
+
+    .techo h2 {
+        font-size: 1rem;
+    }
+
+    .cuerpo {
+        padding: 15px;
+    }
+
+    .formulario {
+        padding: 12px;
+        border-radius: 12px;
+    }
+
+    .formulario legend {
+        font-size: 0.9rem;
+    }
+
+    .formulario label {
+        font-size: 0.8rem;
+    }
+
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .BReserva {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* ---- PopUp ---- */
+    .popup-contenido {
+        width: 95%;
+        padding: 12px;
+    }
+
+    .popup-texto h3 {
+        font-size: 16px;
+    }
+
+    .popup-mascota img {
+        width: 80px;
+    }
+}
+
+/* Footer alineado como en salas/eventos */
+.footer {
+    width: 100%;
+    background: #202248;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: var(--font-size);
+    border-top: 3px solid #ff6b9d;
+    margin-top: 20px;
+}
+
+.footer > div {
+    margin: 5px 0;
+}
+
+.accesibilidad-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.accesibilidad-controls {
+    margin-right: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+

@@ -1,0 +1,333 @@
+:root {
+    --font-size: 16px;
+}
+
+html {
+    font-size: var(--font-size, 16px);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Hoshiko';
+    src: local('Hoshiko Satsuki'),
+         url('../imagenes/Hoshiko%20Satsuki.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Japonesa';
+    src: local('Japonesa'),
+         url('../imagenes/Japonesa.ttf') format('truetype');
+    font-display: swap;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #202248;
+    min-height: 100vh;
+    font-size: var(--font-size);
+}
+
+main {
+    color: white;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 35px auto;
+    font-size: var(--font-size);
+    background: rgb(40, 1, 65);
+    border-radius: 10px;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 0 25px rgb(245, 123, 23);
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: var(--font-size);
+    border: 0.6px solid #c300bc;
+}
+
+th {
+    background: linear-gradient(to bottom, rgb(19, 1, 30), rgb(40, 1, 65)); 
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th:first-child {
+    border-top-left-radius: 10px;
+}
+
+th:last-child {
+    border-top-right-radius: 10px;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: calc(var(--font-size) + 2px);
+    color: #333;
+}
+
+/* Títulos de las salas */
+main h2.titulo-sala {
+    font-family: 'Japonesa', cursive;
+    letter-spacing: 0.08em;
+    color: #ffbd42;
+    font-size: calc(var(--font-size) + 12px);
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 6px #7b5714;
+    display: inline-block;
+    border-radius: 7px;
+}
+
+/* Descripciones de las salas */
+main p {
+    color: white;
+    font-size: calc(var(--font-size) + 2px);
+    line-height: 1.6;
+}
+
+/* Lista de colores centrados */
+.lista-colores {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px auto;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.lista-colores li {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: calc(var(--font-size) - 4px);
+    font-weight: bold;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.lista-colores li span {
+    text-align: center;
+    word-break: break-word;
+    width: 100%;
+    display: block;
+    line-height: 1.2;
+    color: black; /* Color por defecto */
+}
+
+/* Colores de las salas */
+.color-rosa { background-color: #E66DBA; }
+.color-amarillo { background-color: #F2C063; }
+.color-verde { background-color: #04BF9D; }
+.color-naranja { background-color: #F26430; }
+.color-dorado { background-color: #D4AF37; }
+.color-plateado { background-color: #C0C0C0; }
+.color-morado { background-color: #984CC7; }
+.color-azul { background-color: #0378A6; }
+.color-corinto { background-color: #5E0023; }
+.color-azul-marino { background-color: #0D0E38; }
+.color-verde-esmeralda { background-color: #024B35; }
+.color-negro { background-color: #000000; }
+
+/* Colores con letras blancas para la accesibilidad*/
+.color-morado span,
+.color-azul span,
+.color-corinto span,
+.color-azul-marino span,
+.color-verde-esmeralda span,
+.color-negro span {
+    color: white;
+}
+
+/* Carrusel de imágenes */
+.pista-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 350px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.pista {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    background: #202248;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: var(--font-size);
+    border-top: 3px solid #ff6b9d;
+    margin-top: 20px;
+}
+
+.footer > div {
+    margin: 5px 0;
+}
+
+/* Controles de accesibilidad */
+.accesibilidad-controls {
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo de los botones de accesibilidad */
+.accesibilidad-controls button {
+    background: linear-gradient(135deg, #ff2e88, #F99139);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accesibilidad-controls button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.accesibilidad-controls button:active {
+    transform: scale(0.98);
+}
+
+/* Estilos para alto contraste */
+.alto-contraste {
+    background-color: black !important;
+    color: white !important;
+}
+
+.alto-contraste table {
+    background-color: black !important;
+    color: white !important;
+}
+
+.alto-contraste th,
+.alto-contraste td {
+    border: 1px solid white !important;
+}
+
+.alto-contraste a {
+    color: yellow !important;
+}
+
+.alto-contraste .lista-colores li {
+    border: 2px solid white !important;
+}
+
+.alto-contraste button:not(.accesibilidad-controls button),
+.alto-contraste input,
+.alto-contraste select,
+.alto-contraste textarea {
+    background-color: black !important;
+    color: white !important;
+    border: 2px solid yellow !important;
+}
+
+/* Estilos específicos para el footer en alto contraste */
+.alto-contraste .footer {
+    background-color: black !important;
+    border-top: 3px solid yellow !important;
+}
+
+.alto-contraste .footer p,
+.alto-contraste .footer address,
+.alto-contraste .footer a {
+    color: white !important;
+}
+
+.alto-contraste .footer a:hover {
+    color: yellow !important;
+}
+
+
+/* Estilos para modo daltónico */
+.daltonico {
+    filter: sepia(100%) hue-rotate(-50deg) saturate(200%);
+}
+
+.daltonico .accesibilidad-controls button {
+    filter: none;
+}

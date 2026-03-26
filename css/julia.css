@@ -1,0 +1,462 @@
+:root {
+  --font-size: 16px;
+}
+
+html {
+  font-size: var(--font-size, 16px);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #202248;
+  min-height: 100vh;
+  font-size: var(--font-size);
+}
+
+/* UBICACIONES.HTML */
+/* SALAS */
+.contenedor {
+  background: linear-gradient(180deg, #0f1020, #1a1b3a);
+  max-width: 900px;
+  border-radius: 30px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-items: center;
+  row-gap: 10px;        /* Separación vertical entre líneas de leyenda */
+  column-gap: 30px;     /* Separación horizontal entre leyenda y mapa */
+  box-shadow: #1bdbb8 10px 10px 10px;
+}
+
+.salas-info {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.mapa-salas {
+  margin-top: 10px;
+  width: 400px;
+  height: 500px;
+  cursor: pointer;
+}
+
+.mapa-salas path {
+  transition: all 0.3s ease;
+}
+
+.mapa-salas path {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  z-index: 1;
+}
+
+.mapa-salas path#sala-jerez:hover {
+  fill: #ff90d7 !important; /* ROSA */
+  stroke: #e155ae !important;
+  stroke-width: 3px !important;
+  z-index: 10 !important;
+  filter: drop-shadow(0 5px 15px rgba(255, 107, 201, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path#sala-sf:hover {
+  fill: #42c6ff !important; /* AZUL */
+  stroke: #0ba0e0 !important;
+  stroke-width: 3px !important;
+  z-index: 11 !important;
+  filter: drop-shadow(0 5px 15px rgba(33, 163, 249, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path#sala-pr:hover {
+  fill: #ffe766 !important; /* AMARILLO */
+  stroke: #e0c84d !important;
+  stroke-width: 3px !important;
+  z-index: 12 !important;
+  filter: drop-shadow(0 5px 15px rgba(255, 231, 102, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path#sala-cadiz:hover {
+  fill: #29f0cc !important; /* VERDE AGUA */
+  stroke: #1dbfa3 !important;
+  stroke-width: 3px !important;
+  z-index: 13 !important;
+  filter: drop-shadow(0 5px 15px rgba(41, 240, 204, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path#sala-chiclana:hover {
+  fill: #cc78ff !important; /* MORADO */
+  stroke: #a14ed9 !important;
+  stroke-width: 3px !important;
+  z-index: 14 !important;
+  filter: drop-shadow(0 5px 15px rgba(204, 120, 255, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path#sala-conil:hover {
+  fill: #ffa65d !important; /* NARANJA */
+  stroke: #e0893b !important;
+  stroke-width: 3px !important;
+  z-index: 15 !important;
+  filter: drop-shadow(0 5px 15px rgba(255, 166, 93, 0.5));
+  transform: scale(1.03);
+}
+
+.mapa-salas path {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* LEYENDA */
+.leyenda p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.leyenda span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.leyenda {
+  display: contents;
+}
+
+.sala-jerez { background: #ff90d7; }
+.sala-sf { background: #3ac4ff; }
+.sala-pr { background: #ffe766; }
+.sala-cadiz { background: #29f0cc; }
+.sala-chiclana { background: #cc78ff; }
+.sala-conil { background: #ffa65d; }
+
+.salas-mapa {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.leyenda > div {
+  white-space: nowrap;
+  color: #ffffff;
+}
+
+.leyenda > div:nth-child(odd) { /* Línea impar a la izquierda del SVG */
+  grid-column: 1;
+  justify-self: end;
+}
+
+.leyenda > div:nth-child(even) { /* Línea par a la derecha del SVG */
+  grid-column: 3;
+  justify-self: start;
+}
+
+.leyenda > div:nth-child(1),
+.leyenda > div:nth-child(2) {
+  grid-row: 1;
+}
+
+.leyenda > div:nth-child(3),
+.leyenda > div:nth-child(4) {
+  grid-row: 2;
+}
+
+.leyenda > div:nth-child(5),
+.leyenda > div:nth-child(6) {
+  grid-row: 3;
+}
+
+/* BOTÓN DE RESERVA */
+.btn-reserva {
+  grid-column: 1 / -1;
+  grid-row: 4;
+}
+
+.btn-reserva {
+  background: linear-gradient(135deg, #ff2e88, #F99139);
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  margin-bottom: 10px;;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-reserva:hover {
+  background: linear-gradient(135deg, #ff6bd0, #F99139);
+  transform: translateY(-3px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .contenedor {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .salas-mapa,
+  .leyenda > div,
+  .btn-reserva {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+  }
+
+  .salas-mapa {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .leyenda > div {
+    width: 100%;
+    max-width: 320px;
+    text-align: left;
+  }
+
+  .mapa-salas { width: 300px; height: 300px; }
+  header h1 { font-size: 2em; }
+}
+
+/* EVENTOS.HTML */
+.pagina {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+/* FLEXBOX 3X2 */
+.eventos-contenedor {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  grid-template-columns: auto auto auto;
+  width: 936px;
+  height: 630px;
+  background-color: #ffffff;
+  border: #11a78b solid 3px;
+  box-shadow: #1bdbb8 10px 10px 10px;
+  border-radius: 10px;
+}
+
+.eventos-contenedor div {
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  width: 310px;
+  height: 310px;
+}
+
+.evento {
+  transform: scale(0.99);
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.evento:hover {
+  transform: scale(1.03);
+  transition: all 0.3s ease;
+}
+
+/* ===== CALENDARIO ===== */
+.calendar-section {
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    margin: 40px auto;
+    max-width: 550px;
+    max-height: 550px;
+}
+
+.calendar {
+    background: #1a1b3a;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    overflow: hidden;
+    margin-top: 20px;
+    width: 350px;
+
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px;
+    background: linear-gradient(135deg, #ff2e88, #F99139);
+    color: white;
+    height: 60px;
+}
+
+.calendar-header button {
+    background: rgba(255,255,255,0.25);
+    border: none;
+    color: white;
+    font-size: 22px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: bold;
+}
+
+.calendar-header button:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.12);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+#monthYear {
+  font-size: calc(var(--font-size) + 8px);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    padding: 12px;
+    background: #0f1020;
+}
+
+#days {
+    max-width: 500px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    background: linear-gradient(180deg, #0f1020, #1a1b3a);
+}
+
+.day-name {
+    text-align: center;
+    font-weight: 700;
+    padding: 14px 4px;
+    background: #0f1020;
+    color: #F99139;
+  font-size: calc(var(--font-size) - 3px);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.day {
+    height: 52px;
+    text-align: center;
+    line-height: 52px;
+    border: 1.5px solid #ff2e8958;
+    cursor: default;
+    font-weight: 600;
+  font-size: calc(var(--font-size) - 1px);
+    transition: all 0.25s ease;
+    position: relative;
+    color: #9d9d9d;
+}
+
+.day.empty {
+    background: transparent;
+    border: none;
+    cursor: default;
+}
+
+.day:hover {
+    background: linear-gradient(180deg, #0f1020, #1a1b3a);
+    border-color: #dee2e6;
+    transform: scale(1.02);
+}
+
+.day.empty:hover {
+    background: transparent;
+    transform: none;
+}
+
+.day.event {
+    background: linear-gradient(135deg, #fff3b1, #ffe766) !important;
+    border: 2.5px solid #efd648 !important;
+    cursor: pointer !important;
+    font-weight: 800 !important;
+    color: #fc9139 !important;
+    transform: scale(1.03) !important;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.4);
+}
+
+.day.event::after {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 11px;
+    animation: sparkle 2s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.4); }
+}
+
+#eventInfo {
+    margin-top: 18px;
+    max-height: 55px;
+    padding: 18px;
+    background: #1a1b3a;
+    border-radius: 14px;
+  font-size: var(--font-size);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    border-left: 5px solid #F99139;
+    transition: all 0.3s ease;
+    color: #F99139;
+}
+
+#eventInfo strong {
+    color: #ff6b9d;
+    display: block;
+    margin-bottom: 6px;
+  font-size: calc(var(--font-size) + 1px);
+}
+
+/* Footer alineado como en salas.html */
+.footer {
+  width: 100%;
+  background: #202248;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: var(--font-size);
+  border-top: 3px solid #ff6b9d;
+  margin-top: 20px;
+}
+
+.footer > div {
+  margin: 5px 0;
+}
+
+.accesibilidad-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.accesibilidad-controls {
+  margin-right: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,405 @@
+/* MENU */
+@font-face {
+    font-family: 'Hoshiko';
+    src: local('Hoshiko Satsuki'),
+         url('../imagenes/Hoshiko%20Satsuki.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Japonesa';
+    src: local('Japonesa'),
+        url('../imagenes/Japonesa.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+/* HEADERS */
+h2{
+    font-family: 'Japonesa';
+    color: #ffe766;
+}
+
+h3{
+    font-family: 'Japonesa';
+    color: #29f0cc;
+}
+
+#top{
+    border-bottom: 3px solid #ff6ec7;   /* Color de prueba */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.titulo{
+    font-family: 'Hoshiko', cursive;
+    letter-spacing: 0.08em;
+    font-size: clamp(1.9rem, 6vw, 3.5rem);
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 7px #1bdbb8;
+    color: #29f0cc;
+}
+
+nav{
+    text-align: center;
+}
+
+.menu{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: clamp(14px, 4vw, 70px);
+    padding: 10px;
+    margin: 0;
+}
+
+.menu a{
+    font-family: 'Japonesa', cursive;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: #ffe766;  /* Color de prueba */
+    font-size: clamp(1rem, 2.3vw, 1.5rem);
+    cursor: pointer;
+
+}
+
+.menu a:hover{
+    color: #1bdbb8; /*Color de prueba*/
+    transition:0.3s;
+    transform: scale(1.1);
+    display:flex;
+    text-decoration: none;
+    align-items: center;
+    border-bottom: 2px solid #29f0cc;
+    text-shadow: 0 0 2px #29f0cc;
+    gap: 5px;
+}
+
+/* Pie de pagina */
+
+.volver-arriba img{
+    width: 150px;
+    display: block;
+    margin: 10px auto;
+    opacity: 0.8;
+}
+
+.volver-arriba img:hover{
+    transform: scale(1.15);
+    transition: 0.3s;
+    opacity: 1;
+}
+
+footer{
+    color: white;
+    border-top: 3px solid #FF6EC7;
+    text-align: center;
+    padding: 20px;
+    
+}
+
+footer div {
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer address {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffe766;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px #ebd03a;
+}
+
+/* =========================================
+   ACCESIBILIDAD
+   ========================================= */
+.accesibilidad-controls {
+    align-self: flex-end;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Estilo de los botones de accesibilidad */
+.accesibilidad-controls button {
+    background: linear-gradient(135deg, #ff2e88, #F99139);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.accesibilidad-controls button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto hover para los botones */
+.accesibilidad-controls button:active {
+    transform: scale(0.98);
+}
+
+
+/* Estilos para alto contraste */
+.alto-contraste {
+    background-color: black !important;
+    color: white !important;
+}
+
+.alto-contraste table {
+    background-color: black !important;
+    color: white !important;
+}
+
+.alto-contraste th, .alto-contraste td {
+    border: 1px solid white !important;
+}
+
+.alto-contraste a {
+    color: yellow !important;
+}
+
+.alto-contraste .lista-colores li {
+    border: 2px solid white !important;
+}
+
+.alto-contraste button:not(.accesibilidad-controls button),
+.alto-contraste input,
+.alto-contraste select,
+.alto-contraste textarea {
+    background-color: black !important;
+    color: white !important;
+    border: 2px solid yellow !important;
+}
+
+/* Estilos para modo daltónico */
+.daltonico {
+    filter: sepia(100%) hue-rotate(-50deg) saturate(200%);
+}
+
+.daltonico .accesibilidad-controls button {
+    filter: none;
+}
+
+
+
+
+/* =========================================
+   MEDIA QUERIES - RESPONSIVE DESIGN
+   ========================================= */
+
+/* ===== TABLET (768px a 1023px) ===== */
+
+@media (max-width: 1023px) {
+    
+    /* ---- Header Menu ---- */
+    #top {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .titulo {
+        font-size: clamp(1.2rem, 3.5vw, 1.7rem);
+        margin-bottom: 8px;
+    }
+
+    .menu {
+        gap: 40px;
+        padding: 8px;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        font-size: clamp(1rem, 2.4vw, 1.15rem);
+    }
+
+    .menu a:hover {
+        transform: scale(1.05);
+    }
+
+    .menu .icono {
+        /* keep icons visible on tablet, hide only on very small screens */
+        display: inline-block;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+        padding: 15px;
+    }
+
+    footer p,
+    footer a {
+        font-size: 0.95rem;
+    }
+
+    .volver-arriba img {
+        width: 120px;
+        margin: 8px auto;
+    }
+}
+
+/* ===== MÓVIL (Menor de 768px) ===== */
+
+@media (max-width: 767px) {
+    
+    /* ---- Header Menu ---- */
+    #top {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .titulo {
+        font-size: clamp(1.1rem, 5vw, 1.35rem);
+        margin-bottom: 8px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 8px;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: clamp(0.95rem, 4vw, 1.05rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 8px 0;
+    }
+
+    .menu a:hover {
+        transform: scale(1.05);
+    }
+
+    .menu .icono {
+        font-size: 1.1rem;
+    }
+}
+
+/* hide icons on very small devices to save space */
+@media (max-width: 479px) {
+    .menu .icono {
+        display: none !important;
+    }
+}
+
+    /* ---- Footer ---- */
+    footer {
+        padding: 12px;
+    }
+
+    footer div {
+        margin-bottom: 10px;
+    }
+
+    footer p,
+    footer address {
+        font-size: 0.9rem;
+        margin: 8px 0;
+    }
+
+    footer a {
+        font-size: 0.9rem;
+    }
+
+    .volver-arriba img {
+        width: 100px;
+        margin: 8px auto;
+    }
+
+
+/* ===== MÓVIL PEQUEÑO (Menor de 480px) ===== */
+
+@media (max-width: 479px) {
+    
+    /* ---- Header Menu ---- */
+    #top {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #ff6ec7;
+    }
+
+    .titulo {
+        font-size: clamp(0.95rem, 6vw, 1.1rem);
+        margin-bottom: 5px;
+    }
+
+    .menu {
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        font-size: clamp(0.85rem, 5vw, 0.95rem);
+        gap: 5px;
+        padding: 5px 0;
+    }
+
+    .menu a:hover {
+        transform: scale(1.02);
+    }
+
+    .menu .icono {
+        font-size: 1rem;
+    }
+
+    /* ---- Footer ---- */
+    footer {
+        padding: 10px;
+        border-top: 2px solid #FF6EC7;
+    }
+
+    footer div {
+        margin-bottom: 8px;
+    }
+
+    footer p,
+    footer address {
+        font-size: 0.8rem;
+        margin: 5px 0;
+    }
+
+    footer a {
+        font-size: 0.8rem;
+    }
+
+    .volver-arriba img {
+        width: 80px;
+        margin: 5px auto;
+    }
+}
